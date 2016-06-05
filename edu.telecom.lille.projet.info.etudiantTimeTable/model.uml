@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_9Fht8PvVEeW-4OPaS2iZdg" name="NewModel">
+  <packagedElement xmi:type="uml:Package" xmi:id="_7uWDIPvWEeW-4OPaS2iZdg" name="timeTableController">
+    <packagedElement xmi:type="uml:Interface" xmi:id="_7uWDIvvWEeW-4OPaS2iZdg" name="ITimeTableController"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_7tn08PvXEeW-4OPaS2iZdg" name="ITimeTableController"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_7t13YfvXEeW-4OPaS2iZdg" name="TimeTableController"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_ePy9UBz6EeaY3P5_9bn6fA" memberEnd="_ePzkYBz6EeaY3P5_9bn6fA _eP1ZkBz6EeaY3P5_9bn6fA" navigableOwnedEnd="_eP1ZkBz6EeaY3P5_9bn6fA">
+      <ownedEnd xmi:id="_ePzkYBz6EeaY3P5_9bn6fA" name="timeTableControllers" type="_7t13YfvXEeW-4OPaS2iZdg" aggregation="composite" association="_ePy9UBz6EeaY3P5_9bn6fA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eP0LcBz6EeaY3P5_9bn6fA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_eP0ygBz6EeaY3P5_9bn6fA" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_eP1ZkBz6EeaY3P5_9bn6fA" name="timeTableDBs" type="_7t3Fh_vXEeW-4OPaS2iZdg" association="_ePy9UBz6EeaY3P5_9bn6fA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eP2AoBz6EeaY3P5_9bn6fA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_eP2nsBz6EeaY3P5_9bn6fA" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_7uaUkPvWEeW-4OPaS2iZdg" supplier="_7uWDIvvWEeW-4OPaS2iZdg" contract="_7uWDIvvWEeW-4OPaS2iZdg"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_7ucw0PvWEeW-4OPaS2iZdg" name="timeTableModel">
+    <packagedElement xmi:type="uml:Class" xmi:id="_7ucw0fvWEeW-4OPaS2iZdg" name="TimeTable">
+      <ownedAttribute xmi:id="_7ucw0vvWEeW-4OPaS2iZdg" name="groupId" visibility="private">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7ucw0_vWEeW-4OPaS2iZdg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7ucw1PvWEeW-4OPaS2iZdg" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_7t3Fh_vXEeW-4OPaS2iZdg" name="TimeTableDB">
+      <ownedAttribute xmi:id="_7t3FiPvXEeW-4OPaS2iZdg" name="file" visibility="private">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7t3FifvXEeW-4OPaS2iZdg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7t3FivvXEeW-4OPaS2iZdg" value="1"/>
+        <qualifier xmi:id="_7t3Fi_vXEeW-4OPaS2iZdg" name="FirstName" visibility="protected">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7t3FjPvXEeW-4OPaS2iZdg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7t3FjfvXEeW-4OPaS2iZdg" value="1"/>
+        </qualifier>
+        <qualifier xmi:id="_7t3FjvvXEeW-4OPaS2iZdg" name="login" visibility="protected">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7t3Fj_vXEeW-4OPaS2iZdg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7t3FkPvXEeW-4OPaS2iZdg" value="1"/>
+        </qualifier>
+        <qualifier xmi:id="_7t3FkfvXEeW-4OPaS2iZdg" name="pwd" visibility="protected">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7t3FkvvXEeW-4OPaS2iZdg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7t3Fk_vXEeW-4OPaS2iZdg" value="1"/>
+        </qualifier>
+        <qualifier xmi:id="_7t3FlPvXEeW-4OPaS2iZdg" name="SurName" visibility="protected">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7t3FlfvXEeW-4OPaS2iZdg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7t3FlvvXEeW-4OPaS2iZdg" value="1"/>
+        </qualifier>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_7t3Fl_vXEeW-4OPaS2iZdg" name="saveDB"/>
+      <ownedOperation xmi:id="_7t3FmPvXEeW-4OPaS2iZdg" name="loadDB"/>
+      <ownedOperation xmi:id="_V7y04Bz8EeaY3P5_9bn6fA" name="checkDB"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_deJJ0BztEeaY3P5_9bn6fA" name="TimeTable">
+      <ownedAttribute xmi:id="_jaXS0Bz8EeaY3P5_9bn6fA" name="TimeTableId" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jaXS0Rz8EeaY3P5_9bn6fA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jaXS0hz8EeaY3P5_9bn6fA" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_enG9ABztEeaY3P5_9bn6fA" name="TimeTableTeacher">
+      <ownedOperation xmi:id="_JKDr8Bz1EeaY3P5_9bn6fA" name="getTeacherLogin"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_fhAZcBztEeaY3P5_9bn6fA" name="Room">
+      <ownedAttribute xmi:id="_iLBK0Bz8EeaY3P5_9bn6fA" name="RoomId" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iLBK0Rz8EeaY3P5_9bn6fA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iLBK0hz8EeaY3P5_9bn6fA" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_iLBK0xz8EeaY3P5_9bn6fA" name="MaxStudent" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iLBK1Bz8EeaY3P5_9bn6fA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iLBK1Rz8EeaY3P5_9bn6fA" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_rRSwoBztEeaY3P5_9bn6fA" name="Booking">
+      <ownedAttribute xmi:id="_gkgZoBz0EeaY3P5_9bn6fA" name="dateBegin" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gkiO0Bz0EeaY3P5_9bn6fA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gki14Bz0EeaY3P5_9bn6fA" value="1"/>
+        <qualifier xmi:id="_qjQhwBz0EeaY3P5_9bn6fA" name="dateBegin" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qjRI0Bz0EeaY3P5_9bn6fA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qjRI0Rz0EeaY3P5_9bn6fA" value="24"/>
+        </qualifier>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_qvUAwBz0EeaY3P5_9bn6fA" name="dateEnd" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qvUAwRz0EeaY3P5_9bn6fA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qvUAwhz0EeaY3P5_9bn6fA" value="1"/>
+        <qualifier xmi:id="_uXwHEBz0EeaY3P5_9bn6fA" name="dateBegin" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uXwHERz0EeaY3P5_9bn6fA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uXwHEhz0EeaY3P5_9bn6fA" value="24"/>
+        </qualifier>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uimFIBz0EeaY3P5_9bn6fA" name="TeacherLogin" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uimFIRz0EeaY3P5_9bn6fA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uimFIhz0EeaY3P5_9bn6fA" value="1"/>
+        <qualifier xmi:id="_yrZGgBz0EeaY3P5_9bn6fA" name="dateEnd" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_yrZGgRz0EeaY3P5_9bn6fA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_yrZGghz0EeaY3P5_9bn6fA" value="24"/>
+        </qualifier>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_y1Em8Bz0EeaY3P5_9bn6fA" name="BookingId" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_y1FOABz0EeaY3P5_9bn6fA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_y1FOARz0EeaY3P5_9bn6fA" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_7aOe4Bz0EeaY3P5_9bn6fA" name="property5" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7aPF8Bz0EeaY3P5_9bn6fA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7aPtABz0EeaY3P5_9bn6fA" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_AlBIwBz1EeaY3P5_9bn6fA" name="addBooking"/>
+      <ownedOperation xmi:id="_C-4jIBz1EeaY3P5_9bn6fA" name="removeBooking"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_XhG4wBzvEeaY3P5_9bn6fA" client="_7t3Fh_vXEeW-4OPaS2iZdg"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_WqM0ABzxEeaY3P5_9bn6fA" memberEnd="_WqM0ARzxEeaY3P5_9bn6fA _WqNbEhzxEeaY3P5_9bn6fA" navigableOwnedEnd="_WqNbEhzxEeaY3P5_9bn6fA">
+      <ownedEnd xmi:id="_WqM0ARzxEeaY3P5_9bn6fA" name="timeTableDBs" type="_7t3Fh_vXEeW-4OPaS2iZdg" aggregation="composite" association="_WqM0ABzxEeaY3P5_9bn6fA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WqNbEBzxEeaY3P5_9bn6fA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WqNbERzxEeaY3P5_9bn6fA" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_WqNbEhzxEeaY3P5_9bn6fA" name="rooms" type="_fhAZcBztEeaY3P5_9bn6fA" association="_WqM0ABzxEeaY3P5_9bn6fA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WqOCIBzxEeaY3P5_9bn6fA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WqOCIRzxEeaY3P5_9bn6fA" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_YjTqsBzxEeaY3P5_9bn6fA" memberEnd="_YjURwBzxEeaY3P5_9bn6fA _YjWG8BzxEeaY3P5_9bn6fA" navigableOwnedEnd="_YjWG8BzxEeaY3P5_9bn6fA">
+      <ownedEnd xmi:id="_YjURwBzxEeaY3P5_9bn6fA" name="timeTableDBs" type="_7t3Fh_vXEeW-4OPaS2iZdg" aggregation="composite" association="_YjTqsBzxEeaY3P5_9bn6fA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YjVf4BzxEeaY3P5_9bn6fA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YjVf4RzxEeaY3P5_9bn6fA" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_YjWG8BzxEeaY3P5_9bn6fA" name="timeTableTeachers" type="_enG9ABztEeaY3P5_9bn6fA" association="_YjTqsBzxEeaY3P5_9bn6fA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YjWuABzxEeaY3P5_9bn6fA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YjWuARzxEeaY3P5_9bn6fA" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_kade4BzxEeaY3P5_9bn6fA" name="timeTablesToTimeTableTeachers" memberEnd="_kaeF8BzxEeaY3P5_9bn6fA _kaetABzxEeaY3P5_9bn6fA" navigableOwnedEnd="_kaetABzxEeaY3P5_9bn6fA">
+      <ownedEnd xmi:id="_kaeF8BzxEeaY3P5_9bn6fA" name="timeTables" type="_deJJ0BztEeaY3P5_9bn6fA" aggregation="shared" association="_kade4BzxEeaY3P5_9bn6fA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_kaeF8RzxEeaY3P5_9bn6fA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_kaeF8hzxEeaY3P5_9bn6fA" value="*"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_kaetABzxEeaY3P5_9bn6fA" name="timeTableTeachers" type="_enG9ABztEeaY3P5_9bn6fA" association="_kade4BzxEeaY3P5_9bn6fA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_kaetARzxEeaY3P5_9bn6fA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_kaetAhzxEeaY3P5_9bn6fA" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_FgjWABzyEeaY3P5_9bn6fA" supplier="_7t3Fh_vXEeW-4OPaS2iZdg"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_QA6cwBz6EeaY3P5_9bn6fA" memberEnd="_QA7D0Bz6EeaY3P5_9bn6fA _QA9gEBz6EeaY3P5_9bn6fA" navigableOwnedEnd="_QA9gEBz6EeaY3P5_9bn6fA">
+      <ownedEnd xmi:id="_QA7D0Bz6EeaY3P5_9bn6fA" name="bookings" type="_rRSwoBztEeaY3P5_9bn6fA" association="_QA6cwBz6EeaY3P5_9bn6fA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QA8R8Bz6EeaY3P5_9bn6fA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QA85ABz6EeaY3P5_9bn6fA" value="*"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_QA9gEBz6EeaY3P5_9bn6fA" name="rooms" type="_fhAZcBztEeaY3P5_9bn6fA" association="_QA6cwBz6EeaY3P5_9bn6fA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QA-HIBz6EeaY3P5_9bn6fA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QA-HIRz6EeaY3P5_9bn6fA" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_GdvA4Bz7EeaY3P5_9bn6fA" memberEnd="_Gdvn8Bz7EeaY3P5_9bn6fA _GdwPAhz7EeaY3P5_9bn6fA" navigableOwnedEnd="_GdwPAhz7EeaY3P5_9bn6fA">
+      <ownedEnd xmi:id="_Gdvn8Bz7EeaY3P5_9bn6fA" name="timeTableDBs" type="_7t3Fh_vXEeW-4OPaS2iZdg" aggregation="composite" association="_GdvA4Bz7EeaY3P5_9bn6fA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GdwPABz7EeaY3P5_9bn6fA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GdwPARz7EeaY3P5_9bn6fA" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_GdwPAhz7EeaY3P5_9bn6fA" name="timeTables" type="_deJJ0BztEeaY3P5_9bn6fA" association="_GdvA4Bz7EeaY3P5_9bn6fA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Gdw2EBz7EeaY3P5_9bn6fA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Gdw2ERz7EeaY3P5_9bn6fA" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_jC8t0Bz7EeaY3P5_9bn6fA" name="timeTablesToBookings" memberEnd="_jC978Bz7EeaY3P5_9bn6fA _jDC0cBz7EeaY3P5_9bn6fA" navigableOwnedEnd="_jDC0cBz7EeaY3P5_9bn6fA">
+      <ownedEnd xmi:id="_jC978Bz7EeaY3P5_9bn6fA" name="timeTables" type="_deJJ0BztEeaY3P5_9bn6fA" aggregation="shared" association="_jC8t0Bz7EeaY3P5_9bn6fA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jDAYMBz7EeaY3P5_9bn6fA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jDBmUBz7EeaY3P5_9bn6fA" value="*"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_jDC0cBz7EeaY3P5_9bn6fA" name="bookings" type="_rRSwoBztEeaY3P5_9bn6fA" association="_jC8t0Bz7EeaY3P5_9bn6fA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jDECkBz7EeaY3P5_9bn6fA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jDFQsBz7EeaY3P5_9bn6fA" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_7t13YPvXEeW-4OPaS2iZdg" client="_7t13YfvXEeW-4OPaS2iZdg" supplier="_7tn08PvXEeW-4OPaS2iZdg" contract="_7tn08PvXEeW-4OPaS2iZdg"/>
+</uml:Model>
