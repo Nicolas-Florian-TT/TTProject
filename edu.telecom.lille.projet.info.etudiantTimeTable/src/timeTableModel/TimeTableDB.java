@@ -43,11 +43,11 @@ public class TimeTableDB {
 	/**
 	 * Collection de l'ensemble des emplois du temps
 	 */
-	public static HashSet<TimeTable> TTSet;
+	public static HashSet<TimeTable> TimeTableSet;
 	/**
 	 * Collection de l'ensemble des emplois du temps des professeurs
 	 */
-	public static HashSet<TimeTableTeacher> TTTSet;
+	public static HashSet<TimeTableTeacher> TimeTableTSet;
 	/**
 	 * Collection de l'ensemble des rooms existantes
 	 */
@@ -60,8 +60,8 @@ public class TimeTableDB {
 	 */
 	public TimeTableDB(Document file) {
 		TimeTableDB.file=file;
-		TimeTableDB.TTSet = new HashSet<TimeTable>();
-		TimeTableDB.TTTSet = new HashSet<TimeTableTeacher>();
+		TimeTableDB.TimeTableSet = new HashSet<TimeTable>();
+		TimeTableDB.TimeTableTSet = new HashSet<TimeTableTeacher>();
 		TimeTableDB.RoomsSet = new HashSet<Room>();
 	}
 
@@ -97,7 +97,7 @@ public class TimeTableDB {
 			ITNewRooms.addContent(NewRoom);
 		}
 		
-		Iterator<TimeTable> ITTT = TimeTableDB.TTSet.iterator();
+		Iterator<TimeTable> ITTT = TimeTableDB.TimeTableSet.iterator();
 		Element ITNewTT = new Element ("Timetables");
 		while(ITTT.hasNext()){
 			Element NewTT = new Element ("Timetable");
@@ -125,7 +125,7 @@ public class TimeTableDB {
 				NewBook.addContent(RoomId);
 				ITNewBookings.addContent(NewBook);
 				}
-			((Parent) TTSet).addContent(ITNewBookings);
+			((Parent) TimeTableSet).addContent(ITNewBookings);
 			NewTT.addContent(NewGroupID);
 			ITNewTT.addContent(NewTT);
 		}
@@ -195,7 +195,7 @@ public class TimeTableDB {
 				Booking Book = new Booking (BookingId, Login, DateBegin, DateEnd, RoomId);
 				TTI.addBooking(Book);
 			}
-		TimeTableDB.TTSet.add(TTI);
+		TimeTableDB.TimeTableSet.add(TTI);
 		}
 				
 	}	
@@ -207,14 +207,14 @@ public class TimeTableDB {
 	 * @return TTSet 
 	 */
 	public HashSet<TimeTable> getTimeTables() {
-		return TimeTableDB.TTSet;
+		return TimeTableDB.TimeTableSet;
 	}
 	/**
 	 * Renvoie la collection de TimeTableTeacher
 	 * @return TTTSet 
 	 */
 	public HashSet<TimeTableTeacher> getTeacherTTs() {
-		return TimeTableDB.TTTSet;
+		return TimeTableDB.TimeTableTSet;
 	}
 	/**
 	 * Renvoie le fichier String fileS

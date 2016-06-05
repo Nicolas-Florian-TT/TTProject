@@ -150,8 +150,8 @@ public class TimeTableController implements ITimeTableController {
 	 */
 	public boolean addTimeTable(int timeTableId) {
         TimeTable NewTT = new TimeTable(timeTableId);
-        if (TimeTableDB.TTSet.contains(NewTT)){
-            TimeTableDB.TTSet.add(NewTT);
+        if (TimeTableDB.TimeTableSet.contains(NewTT)){
+            TimeTableDB.TimeTableSet.add(NewTT);
             return true;
         }
         return false;
@@ -190,7 +190,7 @@ public class TimeTableController implements ITimeTableController {
 	 */
 	@Override
 	public String getTeacherLogin(int timeTableId, int bookId) {
-        Iterator<TimeTable> ItTT = timeTableModel.TimeTableDB.TTSet.iterator();// Création d'un itérateur pour parcourir TimeTableSet
+        Iterator<TimeTable> ItTT = timeTableModel.TimeTableDB.TimeTableSet.iterator();// Création d'un itérateur pour parcourir TimeTableSet
         while(ItTT.hasNext()){
         	TimeTable TT=(TimeTable)ItTT.next();
             if(TT.getGroupId()== timeTableId){ //test pour trouver le bon TimeTable
@@ -217,7 +217,7 @@ public class TimeTableController implements ITimeTableController {
 	 */
 	@Override
 	public int getRoom(int timeTableId, int bookId) {
-		HashSet<TimeTable> TTSet = TimeTableDB.TTSet;
+		HashSet<TimeTable> TTSet = TimeTableDB.TimeTableSet;
 		Iterator<TimeTable> it1=TTSet.iterator();
 		while(it1.hasNext()){//recherche du bon timetable
 			TimeTable TT=(TimeTable)it1.next();
@@ -246,13 +246,13 @@ public class TimeTableController implements ITimeTableController {
 	 */
 	@Override
     public boolean removeTimeTable(int timeTableId) {
-        Iterator<TimeTable> ItTT = timeTableModel.TimeTableDB.TTSet.iterator() ;    // Création d'un itérateur pour parcourir RoomsSet
+        Iterator<TimeTable> ItTT = timeTableModel.TimeTableDB.TimeTableSet.iterator() ;    // Création d'un itérateur pour parcourir RoomsSet
         while(ItTT.hasNext()){
                 // on parcourt le set de timetable en cherchant un élément égal
                 //à l'id du timetable que l'on veut supprimer
                 if(ItTT.next().getGroupId()== timeTableId){
                     TimeTable DelTT = new TimeTable(timeTableId);                //Création d'un Objet TimeTable
-                    timeTableModel.TimeTableDB.TTSet.remove(DelTT);                     //Supression de l'emploi du temps
+                    timeTableModel.TimeTableDB.TimeTableSet.remove(DelTT);                     //Supression de l'emploi du temps
                     saveDB();
                     return true;
                 }
@@ -282,7 +282,7 @@ public class TimeTableController implements ITimeTableController {
     public boolean addBooking(int timeTableId, int bookingId, String login, Date dateBegin, Date dateEnd, int roomId) {
         Booking NewBooking = new Booking(bookingId,login,dateBegin,dateEnd,roomId); //creation de la nouvelle reservation suivant les parametres
         //TimeTable NewTT = new TimeTable (timeTableId);
-        Iterator<TimeTable> ItTT = timeTableModel.TimeTableDB.TTSet.iterator() ;    // Création d'un itérateur de timetable
+        Iterator<TimeTable> ItTT = timeTableModel.TimeTableDB.TimeTableSet.iterator() ;    // Création d'un itérateur de timetable
         while(ItTT.hasNext()){//recherche du bon timetable
         	TimeTable TT=(TimeTable)ItTT.next();
             if(TT.getGroupId()== timeTableId){ //bon timetable trouvé
@@ -321,7 +321,7 @@ public class TimeTableController implements ITimeTableController {
 	 */
 	@Override
     public boolean removeBook(int timeTableId, int bookId) {
-        Iterator<TimeTable> ItTT = timeTableModel.TimeTableDB.TTSet.iterator();// Création d'un itérateur pour parcourir TimeTableSet
+        Iterator<TimeTable> ItTT = timeTableModel.TimeTableDB.TimeTableSet.iterator();// Création d'un itérateur pour parcourir TimeTableSet
         while(ItTT.hasNext()){
         	TimeTable TT=(TimeTable)ItTT.next();
             if(TT.getGroupId()== timeTableId){ //test pour trouver le bon TimeTable
@@ -350,8 +350,8 @@ public class TimeTableController implements ITimeTableController {
 	@Override
 	public int getBookingsMaxId(int timeTableId){
         int max = 0;
-        HashSet<TimeTable> TTSet = TimeTableDB.TTSet;
-        Iterator<TimeTable> it1 = TimeTableDB.TTSet.iterator();   // Premier itérateur pour parcourir les TimeTable
+        HashSet<TimeTable> TTSet = TimeTableDB.TimeTableSet;
+        Iterator<TimeTable> it1 = TimeTableDB.TimeTableSet.iterator();   // Premier itérateur pour parcourir les TimeTable
         while(it1.hasNext()){
             TimeTable TT=(TimeTable)it1.next();
             if(TT.getGroupId() == timeTableId){             // On trouve le TimeTable correspondant
