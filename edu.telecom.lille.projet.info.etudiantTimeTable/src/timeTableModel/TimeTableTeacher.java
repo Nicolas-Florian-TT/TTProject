@@ -35,8 +35,7 @@ public class TimeTableTeacher extends TimeTable {
 		
 		this.bookings = new HashSet<Booking>();
 	}
-		// End of user code
-	
+		
 
 	
 }

@@ -169,16 +169,14 @@ public class TimeTableController implements ITimeTableController {
 	public boolean addRoom(int roomId, int capacity){
 		HashSet<Room> RoomsSet = TimeTableDB.RoomsSet;
 		Room newroom = new Room(roomId,capacity);
-		boolean b;
 		if((RoomsSet.contains(newroom))){
-			b=false;
+			return false;
 		}
 		else{
-			b=true;
 			RoomsSet.add(newroom);
+			saveDB();
+			return true;
 		}
-		saveDB();
-		return b;
 	}
 	
 	/**
@@ -192,8 +190,20 @@ public class TimeTableController implements ITimeTableController {
 	 */
 	@Override
 	public String getTeacherLogin(int timeTableId, int bookId) {
-		// TODO Auto-generated method stub
-		return null;
+        Iterator<TimeTable> ItTT = timeTableModel.TimeTableDB.TTSet.iterator();// Création d'un itérateur pour parcourir TimeTableSet
+        while(ItTT.hasNext()){
+        	TimeTable TT=(TimeTable)ItTT.next();
+            if(TT.getGroupId()== timeTableId){ //test pour trouver le bon TimeTable
+            	Iterator<Booking> itBB = TimeTable.bookings.iterator();
+                while(itBB.hasNext()){ //recherche de la bonne reservation parmis celle du bon TimeTable
+                	Booking BB=(Booking)itBB.next();
+                	if (BB.getbookId()==bookId){
+                		return BB.getlogin(); //on recupere le login du professeur             
+                        }
+                    }
+               	}
+        }
+        return null;
 	}
 	
 	/**
